@@ -5,3 +5,5 @@ This project requires the importing of Python libraries:
 - logging
 - dokusan
 - psutil
+
+Designed using PyCharm
