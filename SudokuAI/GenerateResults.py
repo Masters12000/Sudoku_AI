@@ -126,8 +126,8 @@ for cycles in cycleList:
                             method = choices[ idx ]
                             results.append(aICaller(method, grid))
 
-                        elif method != choices[ idx ]:
-                            method = choices[ idx ]
+                        elif method != choices[idx]:
+                            method = choices[idx]
                             rdp = ram.differencePercent()
                             rdb = ram.differenceUsed()
                             results[ -1 ].ramPercent = rdp
@@ -168,7 +168,7 @@ for cycles in cycleList:
             saveResult.saveID(str(cycles) + ":" + str(x))
             saveResult.updateMLSaved(ML_Range)
             saveResult.csvSave()
-        print(f"Program took: {timer.exit()} seconds")
+        print(f"Program took: {timer.exit()}")
         print(f"Finished at: {timer.current()}")
 
         refreshMLStorage.refresh()

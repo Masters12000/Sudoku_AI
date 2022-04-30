@@ -85,4 +85,4 @@ class CPUThreaded:
         return max(self._percentage)
 
     def getLatestPercent(self):
-        return self._percentage[-1]
+        return self._percentage[-1] - self._percentage[0]

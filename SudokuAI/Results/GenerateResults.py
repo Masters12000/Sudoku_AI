@@ -2,27 +2,27 @@ class GenResults():
     def __init__(self):
         self.listOfResults = []
         self._resultsDict = {
-            "method": "",
+            "method": "Test",
             "success": 0,
             "fails": 0,
             "cycles": 0,
-            "Min_Time_Per_Cycle": 0,
+            "Min_Time_Per_Cycle": 100000000000,
             "Avg_Time_Per_Cycle": 0,
             "Max_Time_Per_Cycle": 0,
             "timeSpent": 0,
-            "Min_Attempts_Taken": 1,
+            "Min_Attempts_Taken": 100000000000,
             "Avg_Attempts_Taken": 1,
             "Max_Attempts_Taken": 1,
-            "Min_CPU_frequency": 0,
+            "Min_CPU_frequency": 100000000000,
             "Avg_CPU_frequency": 0,
             "Max_CPU_frequency": 0,
-            "Min_CPU_percentage": 0,
+            "Min_CPU_percentage": 100000000000,
             "Avg_CPU_percentage": 0,
             "Max_CPU_percentage": 0,
-            "Min_RAM_Bytes": 0,
-            "RAM_bytes": 0,
+            "Min_RAM_Bytes": 100000000000,
+            "Avg_RAM_bytes": 0,
             "Max_RAM_Bytes": 0,
-            "Min_RAM_percentage": 0,
+            "Min_RAM_percentage": 100000000000,
             "Avg_RAM_percentage": 0,
             "Max_RAM_percentage": 0,
             "SaveID": "",
@@ -129,16 +129,18 @@ class GenResults():
         self._resultsDict["Max_RAM_Bytes"] = max(ramBytes)
 
         self._resultsDict["Min_RAM_percentage"] = min(ramPercent)
+        if self._resultsDict["Min_RAM_percentage"] < 0:
+            self._resultsDict["Min_RAM_percentage"] = float(0)
         self._resultsDict["Avg_RAM_percentage"] = avg(ramPercent)
         self._resultsDict["Max_RAM_percentage"] = max(ramPercent)
 
         #Attempt to reduce ram usage between cycles
-        laps = [ ]
-        cpuFreq = [ ]
-        cpuPercent = [ ]
-        attempts = [ ]
-        ramBytes = [ ]
-        ramPercent = [ ]
+        laps.clear()
+        cpuFreq.clear()
+        cpuPercent.clear()
+        attempts.clear()
+        ramBytes.clear()
+        ramPercent.clear()
 
         return self._resultsDict
 
