@@ -69,7 +69,7 @@ cycleList = [1000, 2500]
 cycleList = [cycles]
 print(f"Started at: {Timer().current()}")
 for cycles in cycleList:
-    for x in range(1, 4):
+    for x in range(1, 6):
         print("Cycle => " + str(cycles) + ":" + str(x))
         results = []
 
