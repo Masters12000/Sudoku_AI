@@ -8,7 +8,7 @@ class ML:
 
     def start(self):
         ml = ML_Save.ML_Accessor()
-        ml.changeFile("Without_Training/ML_250000")
+        ml.changeFile("Without_Training/ML_10000")
 
         if ml.load(self._grid):
             #print(self._grid)

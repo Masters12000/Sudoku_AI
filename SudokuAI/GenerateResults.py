@@ -45,7 +45,7 @@ def aICaller(ai, grid):
 
     return r
 max_size = 9  # Must be a multiple of 3
-ML_Range = 250000
+ML_Range = 10000
 choices = {
     1: "Backtracking",
     2: "CrossHatching-Random",

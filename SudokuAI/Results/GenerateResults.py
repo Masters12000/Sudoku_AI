@@ -129,8 +129,6 @@ class GenResults():
         self._resultsDict["Max_RAM_Bytes"] = max(ramBytes)
 
         self._resultsDict["Min_RAM_percentage"] = min(ramPercent)
-        if self._resultsDict["Min_RAM_percentage"] < 0:
-            self._resultsDict["Min_RAM_percentage"] = float(0)
         self._resultsDict["Avg_RAM_percentage"] = avg(ramPercent)
         self._resultsDict["Max_RAM_percentage"] = max(ramPercent)
 

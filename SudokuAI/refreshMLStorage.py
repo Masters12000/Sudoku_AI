@@ -16,4 +16,4 @@ def refresh():
         # source to destination
         dest = shutil.copy(root_src_dir, root_dst_dir)
 
-#refresh()
+refresh()

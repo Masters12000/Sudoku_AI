@@ -1,7 +1,7 @@
 #Checks the for duplicates in the dataset, and number saved
 total_solutions = 6670903752021072936960
 fileLocation = "ML_Storage.txt"
-#fileLocation = "With_Training/ML_1000.txt"
+fileLocation = "With_Training/ML_250000.txt"
 #fileLocation = "Without_Training/ML_1000.txt"
 file = open(fileLocation, "r")
 lines = file.readlines()

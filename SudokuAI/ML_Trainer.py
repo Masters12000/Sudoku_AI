@@ -10,7 +10,7 @@ class ML_Trainer:
 
     def start(self):
         ml = ML_Accessor()
-        ml.changeFile("With_Training/ML_250000")
+        ml.changeFile("With_Training/ML_10000")
 
         if ml.load(self._grid):
             #print("Found a Solution")
