@@ -1,5 +1,4 @@
-import logging
-logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
+
 class Load_Bar:
     def __init__(self, input_range = 0, gap = 5):
         self._load_bar = [0]
@@ -32,6 +31,6 @@ class Load_Bar:
         if currentPosition in self._load_bar:
             percentage = (currentPosition / self._range) * 100
             percentage = round(percentage, 3)
-            logging.debug(f"{title} - Loading: {percentage}%")
+            print(f"{title} - Loading: {percentage}%")
             if percentage == 100:
                 print(f"{title} Completed")

@@ -38,7 +38,7 @@ class Result:
             "ML_Range": 0
         }
 
-        self._fileName = "Results.csv"
+        self._fileName = "Results/Results.csv"
 
     def csvSave(self):
         """
@@ -52,7 +52,7 @@ class Result:
                     typist.writeheader()
 
                 typist.writerow(self.results)
-                #print("Saved to File")
+
         except IOError:
             print("Error with creating Results.csv file")
 

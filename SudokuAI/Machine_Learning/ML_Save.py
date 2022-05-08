@@ -13,7 +13,6 @@ class ML_Accessor:
         """
         file = open(self._fileLocation, "a")
         strGrid = self._grid2String(grid)
-        #print(grid, "\n", strGrid)
         file.writelines(strGrid+"\n")
         file.close()
 
@@ -73,22 +72,6 @@ class ML_Accessor:
         """
         return self._sudoku
 
-    def test(self, grid):
-        """
-        Testing accessor for validating that compare is working
-        @param grid: unsolved sudoku
-        @return: None
-        """
-        self._sudoku = self._grid2String(grid)
-
-        storage = "6789423192318546415367891324985789457612567213982816347535972164"
-        print(self._sudoku)
-        print(storage)
-        if self._compare(storage):
-            print("Working")
-        else:
-            print("Error")
-
     def changeFile(self, filename):
         """
         Edit the File Accessed, used in generating results
@@ -97,21 +80,3 @@ class ML_Accessor:
         """
         self._fileLocation = "Machine_Learning/" + filename + ".txt"
         return self._fileLocation
-
-    def test(self, grid):
-        return self._grid2String(grid)
-"""
-arr = [
-                        [9, 7, 8, 0, 0, 6, 0, 0, 0],
-                        [5, 0, 0, 0, 8, 4, 0, 3, 0],
-                        [0, 3, 0, 0, 0, 7, 0, 2, 6],
-                        [0, 0, 0, 0, 0, 8, 0, 0, 5],
-                        [8, 0, 4, 6, 0, 0, 2, 1, 0],
-                        [6, 5, 0, 0, 0, 0, 4, 0, 0],
-                        [2, 0, 0, 0, 6, 1, 0, 0, 0],
-                        [0, 0, 0, 0, 0, 0, 0, 6, 0],
-                        [0, 0, 0, 5, 0, 3, 0, 0, 0]]
-
-ml = ML_Accessor()
-string = ml.test(arr)
-print(len(string), string)"""

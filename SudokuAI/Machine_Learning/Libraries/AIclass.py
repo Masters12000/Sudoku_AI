@@ -8,13 +8,25 @@ class AIbasic:
         self._priority = [[0 for x in range(self._size)]for y in range(self._size)]
 
     def getColumn(self, grid, y):
+        """
+        get the column from the current grid (2d array)
+        @param grid: 2d array
+        @param y: column index
+        @return: array - column
+        """
         rtrn = [ ]
         for i in range(self._size):
             rtrn.append(grid[i][y])
         return rtrn
 
-    # returns the segments
     def getSegment(self, grid, row, col):
+        """
+        returns the segments
+        @param grid: 2d array
+        @param row: row index
+        @param col: column index
+        @return: array - segment
+        """
         arr = [ ]
         segment = [ ]
         segmentPos = []
@@ -49,14 +61,23 @@ class AIbasic:
                 segment.append(arr[i])
         return segment
 
-    # Working link to container class, merging all of the print requirements into one function,
-    # suitable for testing and debugging.
     def printGrid(self, size, grid):
+        """
+        Working link to container class, merging all of the print requirements into one function, suitable for testing and debugging.
+        @param size: sudoku grid size
+        @param grid: sudoku grid
+        @return: None
+        """
         con = container(size)
         con.Grid(grid)
         con.printGrid()
 
     def printGridBasic(self, grid):
+        """
+        print the grid in its raw array format, useful for testing new algorithms
+        @param grid: sudoku grid
+        @return: None
+        """
         con = container(9)
         con.Grid(grid)
         con.printGridBasic()

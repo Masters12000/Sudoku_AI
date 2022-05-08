@@ -15,18 +15,32 @@ class CPUThreaded:
 
 
     def terminate(self):
+        """
+        End the thread
+        @return: None
+        """
         self._active = False
 
     def run(self, timeInterval):
+        """
+        Start the Thread
+        @param timeInterval: time between recording
+        @return: None
+        """
         while self._active:
             self._cycle()
             time.sleep(timeInterval)
             logging.debug("updating lists")
 
     def _cycle(self):
+        """
+        Update current frequency and percentage to lists
+        @return:
+        """
         self._frequency.append(psutil.cpu_freq().current)
         self._percentage.append(psutil.cpu_percent())
 
+    #Frequency
     def getSumFrequency(self):
         return sum(self._frequency)
 
@@ -72,4 +86,4 @@ class CPUThreaded:
         return max(self._percentage)
 
     def getLatestPercent(self):
-        return self._percentage[-1]
+        return self._percentage[-1] - self._percentage[0]

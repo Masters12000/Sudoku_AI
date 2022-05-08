@@ -3,13 +3,8 @@ import os, logging, backtracking, ML_Save
 from dokusan import generators
 from Libraries.container import container
 from Libraries.LoadBar import Load_Bar
-import time
-logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
 
-def test(a,b,c):
-    logging.debug(f"Start: {b}")
-    time.sleep(3)
-    logging.debug(f"Ending: {b}")
+logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
 
 def info(title):
     print(title)
@@ -39,7 +34,6 @@ def threadedFunction(cycles, threadName, lB):
             fails += 1
             if (ai.solveSudoku(0, 0)):
                 btGrid = ai.getGrid()
-                # ai.printing()
                 ml.save(btGrid)
 
     logging.debug(f"{threadName}: Solved - {solved}, Failed - {fails}")
