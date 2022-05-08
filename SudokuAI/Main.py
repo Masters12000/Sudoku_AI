@@ -60,7 +60,7 @@ for i in range(cycles):
                 r = results[method]
 
             ai = backtracking.backtrackingAI(grid)
-            if (ai.solveSuduko(0, 0)):
+            if (ai.start(0, 0)):
                 btGrid = ai.getGrid()
 
                 #ai.printing()

@@ -1,7 +1,5 @@
 import time
-
 import psutil
-import threading
 
 class RamDetection():
     def __init__(self):
@@ -20,9 +18,7 @@ class RamDetection():
             temp = psutil.virtual_memory()
             if self._highest[3] < temp[3]:
                 self._highest = temp
-                #print("lalmas")
             time.sleep(interval)
-            #print(self._highest)
 
     def lap(self):
         """
@@ -63,7 +59,6 @@ class RamDetection():
     def refresh(self):
         self._start = psutil.virtual_memory()
         self._highest = psutil.virtual_memory()
-        #self._continue = True
         self._laps = []
 
 """

@@ -40,6 +40,7 @@ class CPUThreaded:
         self._frequency.append(psutil.cpu_freq().current)
         self._percentage.append(psutil.cpu_percent())
 
+    #Frequency
     def getSumFrequency(self):
         return sum(self._frequency)
 

@@ -9,7 +9,7 @@ import logging
 logging.basicConfig(format='%(asctime)s - %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG)
 logging.info(f"Test")
 cycles = 100
-noOfThreads = 1000
+noOfThreads = 100
 timer = Timer()
 logging.critical(f"Program Started at: {timer.current()}")
 def threadedFunction(cycles, threadName):
