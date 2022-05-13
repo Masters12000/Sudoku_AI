@@ -46,8 +46,8 @@ class GenResults():
         """
         self._handleAll()
         for method in self._methods:
-
             self._methods[method] = self._merge(self._methods[method], method)
+
         return self._methods
 
     def _merge(self, dictList, method):

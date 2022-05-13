@@ -154,13 +154,9 @@ for cycles in cycleList:
         results[-1].ramPercent = rdp
         results[-1].ramBytes = rdb
 
-        #for r in results:
-        #    print(f"{r.method, r.timeSpent}")
-
         gen = GenResults()
         gen.listOfResults = results
         result = gen.getResult() # returns dictionary, mainly used in all
-        #print(f"r: {result}")
 
         saveResult = Result()
         for method in result:

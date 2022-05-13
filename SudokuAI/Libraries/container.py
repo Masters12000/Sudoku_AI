@@ -16,10 +16,10 @@ class container:
         arr = self._string
         for i in range(len(arr)-1):
             if counter == 9:
-                row+=1
+                row += 1
                 counter = 0
             self._grid[row][counter] = int(arr[i])
-            counter+=1
+            counter += 1
 
     #public methods
     #Inputs

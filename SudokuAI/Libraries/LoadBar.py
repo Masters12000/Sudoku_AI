@@ -1,8 +1,8 @@
 
 class Load_Bar:
-    def __init__(self, input_range = 0, gap = 5):
+    def __init__(self, input_range = 0, interval = 5):
         self._load_bar = [0]
-        self._gap = gap
+        self._gap = interval
         self._range = input_range
 
         self._current = 0

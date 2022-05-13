@@ -10,11 +10,9 @@ class ML_Trainer:
 
     def start(self):
         ml = ML_Accessor()
-        #ml.changeFile("With_Training/ML_10000")
+        ml.changeFile("With_Training/ML_1000000")
 
         if ml.load(self._grid):
-            #print("Found a Solution")
-            #print(ml.getSolution())
             return True
 
         else:
@@ -25,6 +23,5 @@ class ML_Trainer:
             else:
                 cH = CrossHatching_Random.CrossHatchingR(self._grid)
                 if (cH.start()):
-                    # printGrid(ai.getGrid())
                     ml.save(cH.getGrid())
             return False
